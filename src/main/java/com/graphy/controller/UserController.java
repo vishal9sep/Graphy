@@ -19,7 +19,7 @@ public class UserController {
 	@Autowired
 	UserService userService;
 
-	@PostMapping("/addUser")
+	@PostMapping("/add-user")
 	public ResponseEntity<User> addUserHandler(@Valid @RequestBody User user) throws UserException {
 
 		User savedUser = userService.addUser(user);

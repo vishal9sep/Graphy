@@ -40,7 +40,7 @@ public class EmailService {
     public void sendEmails() {
     	
     	int page = 0;
-        Page<User> userPage = userRepository.findAll(PageRequest.of(page, PAGE_SIZE));
+        Page<User> userPage = userRepository.findAll(PageRequest.of(page, PAGE_SIZE)); //
 
         try (CSVWriter writer = new CSVWriter(new FileWriter(CSV_FILE_PATH, true))) {
             while (!userPage.isEmpty()) {
