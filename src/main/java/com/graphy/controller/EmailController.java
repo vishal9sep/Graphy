@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.graphy.service.EmailService;
 
-@RestController("/")
+@RestController
 public class EmailController {
 
 	@Autowired

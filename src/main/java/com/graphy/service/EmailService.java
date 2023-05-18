@@ -29,6 +29,12 @@ public class EmailService {
     private static final int PAGE_SIZE = 50;
     
     private static final String CSV_FILE_PATH = "C:\\Users\\Vishal\\OneDrive\\Desktop\\Graphy\\Emails_Log.csv";
+    
+    /** 
+	 * This method will send mails to the users and add name and Email of users into the CSV file. 
+	 * 
+	 * I have user Page class and pageRequest() to get a fixed size of Users List from DB to manage the Memory Overflow.
+	 */		
 
     @Scheduled(fixedRate = 6 * 60 * 60 * 1000) // Runs every 6 hours :
     public void sendEmails() {
@@ -72,6 +78,5 @@ public class EmailService {
         	System.out.println(e.getMessage());
             e.printStackTrace();
         }
-
     }
 }
